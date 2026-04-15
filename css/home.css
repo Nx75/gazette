@@ -1,5 +1,4 @@
 :root {
-    /* colors */
     --rosewater: #f5e0dc;
     --flamingo: #f2cdcd;
     --pink: #f5c2e7;
@@ -15,22 +14,18 @@
     --blue: #89b4fa;
     --lavender: #b4befe;
 
-    /* text */
     --text: #cdd6f4;
     --subtext1: #bac2de;
     --subtext0: #a6adc8;
 
-    /* overlays */
     --overlay2: #9399b2;
     --overlay1: #7f849c;
     --overlay0: #6c7086;
 
-    /* surfaces */
     --surface2: #585b70;
     --surface1: #45475a;
     --surface0: #313244;
 
-    /* base */
     --base: #1e1e2e;
     --mantle: #181825;
     --crust: #11111b;
@@ -50,32 +45,70 @@ body {
     font-family: system-ui, sans-serif;
 }
 
+.hack-club {
+    position: relative;
+}
+
+.hack-club a {
+    position: absolute;
+    top: 8rem;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 2rem;
+    padding: 0.75rem 2rem;
     background: var(--surface0);
 }
 
 .navbar img {
-    height: 50px;
+    height: 48px;
     display: block;
 }
 
 .nav-links ul {
     display: flex;
     list-style: none;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .nav-links a {
-    color: var(--text);
     text-decoration: none;
-    padding: 0.5rem 0;
+    color: var(--text);
+    font-size: 0.95rem;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
     color: var(--blue);
+}
+
+#hero {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font: 600;
+    font-family: UnifrakturMaguntia;
+    color: var(--lavender);
+}
+
+#hero h2 {
+    font-size: 1.25rem;
+    color: var(--subtext1);
+    max-width: 500px;
+}
+
+#hero img {
+    width: 180px;
+    opacity: 0.9;
 }
