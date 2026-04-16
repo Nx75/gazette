@@ -29,6 +29,8 @@
     --base: #1e1e2e;
     --mantle: #181825;
     --crust: #11111b;
+
+    --white: #eff1f5;
 }
 
 *,
@@ -133,7 +135,7 @@ main {
 
 #title {
     background: var(--base);
-    border: 1px solid var(--green);
+    border: 1px solid var(--flamingo);
     padding: 0.9rem 1.2rem;
     font-size: 1rem;
     color: var(--teal);
@@ -149,7 +151,7 @@ main {
 
 #description {
     background: var(--base);
-    border: 1px solid var(--green);
+    border: 1px solid var(--flamingo);
     padding: 0.85rem 1.2rem;
     font-size: 0.95rem;
     color: var(--teal);
@@ -172,7 +174,7 @@ main {
     background: var(--base);
     padding: 0.7rem 1rem;
     margin: 0.2rem 0 0.2rem 0;
-    border: 1px solid var(--surface2);
+    border: 1px solid var(--green);
 }
 
 .toolbar button {
@@ -204,7 +206,6 @@ main {
 #save {
     background: var(--base);
     border: var(--red) solid 2px;
-    border-radius: 12px;
     padding: 0.9rem 1.8rem;
     font-weight: 700;
     font-size: 1rem;
@@ -215,5 +216,38 @@ main {
     width: fit-content;
     display: block;
     float: right;
-    margin-left: auto;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+#save:hover {
+    background: var(--green);
+    color: var(--crust);
+    border: var(--green) solid 2px;
+     transform: translateY(-2px);
+}
+
+#view {
+    background: var(--base);
+    border: var(--red) solid 2px;
+    padding: 0.9rem 1.8rem;
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text);
+    cursor: pointer;
+    margin-top: 0.8rem;
+    letter-spacing: 0.5px;
+    width: fit-content;
+    display: block;
+    float: right;
+    margin-right: 1rem;
+    transition: all 0.2s ease;
+}
+
+
+#view:hover {
+    background: var(--green);
+    color: var(--crust);
+    border: var(--green) solid 2px;
+    transform: translateY(-2px);
 }
