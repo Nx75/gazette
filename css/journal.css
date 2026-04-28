@@ -45,15 +45,9 @@ body {
     background: var(--base);
     color: var(--text);
     font-family: system-ui, sans-serif;
-}
-
-.hack-club {
-    position: relative;
-}
-
-.hack-club a {
-    position: absolute;
-    top: 8rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -99,7 +93,7 @@ main {
 .journal_title {
     font-size: 3rem;
     font-weight: 400;
-    font-family: 'UnifrakturMaguntia';
+    font-family: 'UnifrakturMaguntia', cursive;
     color: var(--lavender);
     margin: 1.25rem;
     letter-spacing: 2px;
@@ -115,6 +109,7 @@ main {
     border: 2px solid var(--sapphire);
     box-shadow: 6px 6px 0px 0px var(--sky);
     padding: 2rem 2rem 2.2rem;
+    margin-bottom: 2rem;
 }
 
 .journal-app {
@@ -189,6 +184,8 @@ main {
     align-items: center;
     justify-content: center;
     font-family: monospace, system-ui;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .toolbar button:hover {
@@ -203,30 +200,13 @@ main {
     color: var(--red);
 }
 
-#save {
-    background: var(--base);
-    border: var(--red) solid 2px;
-    padding: 0.9rem 1.8rem;
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--text);
-    cursor: pointer;
-    margin-top: 0.8rem;
-    letter-spacing: 0.5px;
-    width: fit-content;
-    display: block;
-    float: right;
-    margin-left: 1rem;
-    cursor: pointer;
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
 }
 
-#save:hover {
-    background: var(--green);
-    color: var(--crust);
-    border: var(--green) solid 2px;
-     transform: translateY(-2px);
-}
-
+#save,
 #view {
     background: var(--base);
     border: var(--red) solid 2px;
@@ -237,17 +217,109 @@ main {
     cursor: pointer;
     margin-top: 0.8rem;
     letter-spacing: 0.5px;
-    width: fit-content;
-    display: block;
-    float: right;
-    margin-right: 1rem;
     transition: all 0.2s ease;
 }
 
-
+#save:hover,
 #view:hover {
     background: var(--green);
     color: var(--crust);
     border: var(--green) solid 2px;
     transform: translateY(-2px);
+}
+
+.save-feedback {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.save-feedback.success {
+    background: var(--green);
+    color: var(--crust);
+}
+
+.save-feedback.error {
+    background: var(--red);
+    color: var(--crust);
+}
+
+#entryResultsSection {
+    width: min(92vw, 880px);
+    max-width: 92vw;
+    margin-top: 2rem;
+}
+
+.heading-results {
+    color: var(--lavender);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: 'UnifrakturMaguntia', cursive;
+}
+
+.entryResultRow {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.single-entry-div {
+    background: var(--surface0);
+    border: 1px solid var(--sapphire);
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+    box-shadow: 6px 6px 0px 0px var(--sky);
+}
+
+.single-entry-div:hover {
+    transform: translateX(4px);
+}
+
+.single-entry-heading {
+    color: var(--peach);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.single-entry-date {
+    color: var(--subtext0);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.single-entry-text {
+    color: var(--text);
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+.delete-entry {
+    background: var(--red);
+    color: var(--crust);
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.delete-entry:hover {
+    background: var(--maroon);
+    transform: translateY(-1px);
+}
+
+.no-entries {
+    text-align: center;
+    padding: 3rem;
+    color: var(--subtext0);
+    font-style: italic;
+}
+
+.notice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

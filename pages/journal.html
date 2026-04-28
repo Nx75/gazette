@@ -20,8 +20,8 @@
             <ul>
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="journal.html">Journal</a></li>
-                <li><a href="#">Vision</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="ERROR404.html">Vision</a></li>
+                <li><a href="ERROR404.html">About Us</a></li>
             </ul>
         </div>
     </div>
@@ -37,17 +37,22 @@
                     <button data-cmd="bold" title="Bold">B</button>
                     <button data-cmd="italic" title="Italic">I</button>
                     <button data-cmd="underline" title="Underline">U</button>
-                    <button data-cmd="underline" title="Underline"><s>S</s></button>
+                    <button data-cmd="strikeThrough" title="Strikethrough"><s>S</s></button>
+                    <p class="notice">THIS DOES NOT WORK FOR NOW </p>
                 </div>
                 <div class="buttons">
                     <button id="save">Save Journal</button>
-                    <button id="view">View Journal</button>
+                    <!--button id="view">View Journal</button-->
                 </div>
                 <div id="save-message" class="save-feedback"></div>
             </div>
         </div>
+        <div id="entryResultsSection">
+            <div class="entryResultRow"></div>
+        </div>
     </main>
     <script src="../js/text_formatting.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

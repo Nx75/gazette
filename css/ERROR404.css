@@ -1,0 +1,196 @@
+:root {
+    --rosewater: #f5e0dc;
+    --flamingo: #f2cdcd;
+    --pink: #f5c2e7;
+    --mauve: #cba6f7;
+    --red: #f38ba8;
+    --maroon: #eba0ac;
+    --peach: #fab387;
+    --yellow: #f9e2af;
+    --green: #a6e3a1;
+    --teal: #94e2d5;
+    --sky: #89dceb;
+    --sapphire: #74c7ec;
+    --blue: #89b4fa;
+    --lavender: #b4befe;
+
+    --text: #cdd6f4;
+    --subtext1: #bac2de;
+    --subtext0: #a6adc8;
+
+    --overlay2: #9399b2;
+    --overlay1: #7f849c;
+    --overlay0: #6c7086;
+
+    --surface2: #585b70;
+    --surface1: #45475a;
+    --surface0: #313244;
+
+    --base: #1e1e2e;
+    --mantle: #181825;
+    --crust: #11111b;
+
+    --white: #eff1f5;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--base);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    background: var(--surface0);
+}
+
+.navbar img {
+    height: 48px;
+    display: block;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+}
+
+.error-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.error-content {
+    background: var(--surface0);
+    border: 2px solid var(--sapphire);
+    padding: 3rem 2rem;
+    text-align: center;
+    box-shadow: 6px 6px 0px 0px var(--sky);
+}
+
+.error-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 7rem;
+    font-weight: 900;
+    font-family: 'UnifrakturMaguntia', monospace;
+}
+
+.digit {
+    color: var(--yellow);
+}
+
+.zero {
+    color: var(--sapphire);
+}
+
+.error-divider {
+    width: 80px;
+    height: 2px;
+    background: var(--lavender);
+    margin: 1.5rem auto;
+}
+
+.error-title {
+    font-size: 2rem;
+    font-family: 'UnifrakturMaguntia', cursive;
+    color: var(--lavender);
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.error-message {
+    color: var(--subtext0);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.error-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.action-btn {
+    padding: 0.8rem 1.6rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    font-family: system-ui, sans-serif;
+}
+
+.action-btn.primary {
+    background: var(--base);
+    color: var(--text);
+    border: 2px solid var(--blue);
+}
+
+.action-btn.primary:hover {
+    background: var(--blue);
+    color: var(--crust);
+}
+
+.action-btn.secondary {
+    background: var(--base);
+    color: var(--text);
+    border: 2px solid var(--red);
+}
+
+.action-btn.secondary:hover {
+    background: var(--red);
+    color: var(--crust);
+}
+
+.error-footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--surface1);
+}
+
+.error-footer p {
+    color: var(--overlay0);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
